@@ -12,7 +12,7 @@ Only available to use it on LUA programming language. If you need help implement
 > Add this code inside your script (online fetch):
 ```lua
     --- Fetch the item database.
-    local ItemDatabase = assert(load(request('GET', 'https://raw.githubusercontent.com/junssekut/saraItemDatabase/main/ItemDatabase.lua')()))
+    local ItemDatabase = assert(load(request('GET', 'https://raw.githubusercontent.com/junssekut/saraItemDatabase/main/ItemDatabase.lua'))())
 
     --- Get item name from item id.
     ItemDatabase[4584] --- Pepper Tree
@@ -21,7 +21,8 @@ Only available to use it on LUA programming language. If you need help implement
 
 > Add this code inside your script if you want it offline or locally:
 ```lua
-    --- Replace 'ItemDatabase' with the name of your database file, of course you need to download the file first and place it in the same folder as Pandora located.
+    --- Replace 'ItemDatabase' with the name of your database file, of course you need 
+    --- to download the file first and place it in the same folder as Pandora located.
     local ItemDatabase = require('ItemDatabase')
 
     --- Get item name from item id.
